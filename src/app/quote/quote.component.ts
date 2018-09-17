@@ -13,7 +13,7 @@ export class QuoteComponent implements OnInit {
 
   quotes = [
     new Quote(1,"Dare to be the best","Maryln","Carol"),
-    new Quote(1,"Dare to be the best","Maryln","Carol"),
+    new Quote(2,"All things are possible","Gael","red"),
   ]
 
   delete(isDone,index){
