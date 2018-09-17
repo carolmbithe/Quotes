@@ -8,3 +8,6 @@
     <div class="row">
         <app-quotedetails [quote]='quotes' (isDone)='delete($event,i)'></app-quotedetails>
       </div>
+      <div class="row">
+            <app-quoteform (addQuote)='addNewQuote($event,i)'></app-quotedetails>
+          </div>
