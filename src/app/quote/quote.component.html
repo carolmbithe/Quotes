@@ -1,11 +1,12 @@
 <div id="grad">
 <div class="container">
   <div class="row">
+    
     <div class="col-md-6">
-    <div class="jumbotron bg-dark text-white">
+    <div class="jumbotron">
 <h1>Create your {{ title }}!</h1>
 </div>
-
+<div class="align">
     <ul>
       <div *ngFor='let quote of quotes;let i="index"'>
          <li> {{quote.quote}} </li>
@@ -15,6 +16,7 @@
 
     
         <app-quotedetails [quote]='quotes' (isDone)='delete($event,i)'></app-quotedetails>
+      </div>
       </div>
 
       <div class="col-md-6">
