@@ -9,7 +9,9 @@
 <div class="align">
     <ul>
       <div *ngFor='let quote of quotes;let i="index"'>
-         <li> {{quote.quote}} </li>
+         <li> {{quote.quote}} 
+            <app-quotedetails [quote]='quotes' (isDone)='delete($event,i)'></app-quotedetails>  </li>
+         
     
 </div>
 </ul>
