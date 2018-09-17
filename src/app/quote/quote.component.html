@@ -1,5 +1,10 @@
 <h1>Create your {{ title }}!</h1>
     <ul>
-   <li *ngFor='let quote of quotes'>{{quote.quote}} </li>
-  
-    </ul>
+      <div *ngFor='let quote of quotes'>
+         <li> {{quote.quote}} </li>
+    
+</div>
+</ul>
+    <div class="row">
+        <app-quotedetails [quote]='quotes'></app-quotedetails>
+      </div>
