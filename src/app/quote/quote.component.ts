@@ -16,6 +16,12 @@ export class QuoteComponent implements OnInit {
     new Quote(1,"Dare to be the best","Maryln","Carol",),
   ]
 
+  delete(isDone,index){
+    if (isDone){
+              
+                  this.quotes.splice(index,1)
+              }
+          }
   constructor() { }
 
   ngOnInit() {

@@ -1,10 +1,10 @@
 <h1>Create your {{ title }}!</h1>
     <ul>
-      <div *ngFor='let quote of quotes'>
+      <div *ngFor='let quote of quotes;let i=index'>
          <li> {{quote.quote}} </li>
     
 </div>
 </ul>
     <div class="row">
-        <app-quotedetails [quote]='quotes'></app-quotedetails>
+        <app-quotedetails [quote]='quotes' (isDone)='delete($event,i)'></app-quotedetails>
       </div>
