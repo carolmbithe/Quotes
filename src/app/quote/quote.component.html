@@ -1,6 +1,7 @@
+<div class="container">
 <h1>Create your {{ title }}!</h1>
     <ul>
-      <div *ngFor='let quote of quotes;let i=index'>
+      <div *ngFor='let quote of quotes;let i="index"'>
          <li> {{quote.quote}} </li>
     
 </div>
@@ -9,5 +10,7 @@
         <app-quotedetails [quote]='quotes' (isDone)='delete($event,i)'></app-quotedetails>
       </div>
       <div class="row">
-            <app-quoteform (addQuote)='addNewQuote($event,i)'></app-quotedetails>
+            <app-quoteform (addQuote)='addNewQuote($event,i)'></app-quoteform>
           </div>
+
+    </div>div>
