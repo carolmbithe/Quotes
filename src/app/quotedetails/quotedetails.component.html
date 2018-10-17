@@ -1,5 +1,13 @@
+
 <p>The author is {{quote.author}} and it was submitted by {{quote.person}} </p>
 
-  <!-- and it has this {{quote.votes}} number of votes</p> -->
+
+
+   <button type ="button"class="btn btn-info">Upvote</button>0
+   <button type ="button"class="btn btn-info">Downvote</button>0
+
+        <p>This quote was submited {{quote.createdTime|dateCount}} days ago</p>
+
 
   <button class="btn btn-danger" (click) ='delete(true)'>Delete</button>
+  <!-- <button class="btn btn-primary" (onclick) ='counter()'>Vote</button> -->

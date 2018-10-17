@@ -1,11 +1,12 @@
 export class Quote {
-  public showAuthor: boolean;
+  // public showAuthor: boolean;
 
-    constructor(public id:number,public quote:string,public author:string,public person:string){
-      this.showAuthor=true
+    constructor(public id:number,public quote:string,public author:string,public person:string,public createdTime:Date,public upVotes:number,public downVotes:number){
+      
+      // this.showAuthor=true
     }
   }
-  
-  // ,public createdTime:Date
+
+  // 
   
 //   ,public votes:number

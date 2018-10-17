@@ -1,31 +1,32 @@
-<div id="grad">
-<div class="container">
-  <div class="row">
-    
-    <div class="col-md-6">
-    <div class="jumbotron">
-<h1>Create your {{ title }}!</h1>
-</div>
-<div class="align">
-    <ul>
-      <div *ngFor='let quote of quotes;let i="index"'>
-         <li> {{quote.quote}} 
-            <app-quotedetails [quote]='quotes' (isDone)='delete($event,i)'></app-quotedetails>  </li>
-         
-    
-</div>
-</ul>
 
-    
-        <app-quotedetails [quote]='quotes' (isDone)='delete($event,i)'></app-quotedetails>
-      </div>
-      </div>
+<div class="container">
+  <div id="grad">
+  <div class="row">
+
+<div class="col-md-6">
+  <div class="jumbotron">
+<h1>Create your {{ title }}!</h1>
+
+</div>
+
+<div class="align">
+
+      <div class="row"*ngFor="let quote of quotes;let i =index">
+        <div class="well">
+        <ul>
+         <li appHighlight >{{quote.quote}}
+            <app-quotedetails [quote]='quote' (isDone)='delete($event,i)'></app-quotedetails>  </li>
+
+         </ul>
+         </div>
+       </div>
+     </div>
+
+</div>
 
       <div class="col-md-6">
-      
-            <app-quoteform (addQuote)='addNewQuote($event,i)'></app-quoteform>
-          
-</div>
+
+            <app-quoteform (addQuote)='addQuote($event)'></app-quoteform>
     </div>
   </div>
 </div>
